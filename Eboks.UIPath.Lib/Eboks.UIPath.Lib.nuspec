@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>1.0</version>
+    <title>Eboks UIPath Library</title>
+    <authors>Frederik Lundbeck Jørgensen</authors>
+    <owners>Frederik Lundbeck Jørgensen</owners>
+    <licenseUrl></licenseUrl>
+    <projectUrl></projectUrl>
+    <iconUrl></iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A helper library for UIPath developing at Eboks</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>Eboks</tags>
+  </metadata>
+</package>
