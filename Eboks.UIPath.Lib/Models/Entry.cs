@@ -8,7 +8,7 @@ namespace Eboks.UIPath.Lib.Models
 {
     public class Entry : IEquatable<Entry>
     {
-        public string EntryDate { get; set; }
+        public DateTime EntryDate { get; set; }
         public string AttachmentType { get; set; }
         public string AttachmentNumber { get; set; }
         public string GeneralLedgerNumber { get; set; }
@@ -20,6 +20,8 @@ namespace Eboks.UIPath.Lib.Models
         public string CountryCode { get; set; }
         public string ActivitiesCode { get; set; }
         public double VatAmount { get; set; }
+
+        public Boolean Forecast { get; set; } = false;
 
         public Entry()
         {

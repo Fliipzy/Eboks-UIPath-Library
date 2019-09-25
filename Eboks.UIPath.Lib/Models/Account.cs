@@ -16,9 +16,12 @@ namespace Eboks.UIPath.Lib.Models
         public string ProductEntryGroup { get; set; }
         public double NetChange { get; set; }
         public double Balance { get; set; }
-        public List<Entry> Entries { get; }
+        public List<Entry> Entries { get; set; } = new List<Entry>();
 
-        public Account(){}
+        public Account()
+        {
+            Entries = new List<Entry>();
+        }
 
         public override string ToString()
         {
