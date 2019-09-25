@@ -5,7 +5,7 @@ using System.ComponentModel;
 
 namespace Eboks.UIPath.Lib.Activities.Collections.List
 {
-    class FindFirstFromList<T> : CodeActivity
+    public class FindFirstFromList<T> : CodeActivity
     {
         [Category("Input")]
         [RequiredArgument]

@@ -8,7 +8,7 @@ using System.ComponentModel;
 
 namespace Eboks.UIPath.Lib.Activities.Collections.Dictionary
 {
-    class AddToDictionary<T,U> : CodeActivity
+    public class AddToDictionary<T,U> : CodeActivity
     {
         [Category("Input")]
         [RequiredArgument]

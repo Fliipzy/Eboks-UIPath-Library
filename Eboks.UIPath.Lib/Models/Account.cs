@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Eboks.UIPath.Lib.Models
 {
-    class Account
+    public class Account : IEquatable<Account>
     {
         public string Number { get; set; }
         public string Name { get; set; }
@@ -25,16 +25,13 @@ namespace Eboks.UIPath.Lib.Models
             return $"{Name}, {Number}";
         }
 
-        public override bool Equals(object obj)
+        public bool Equals(Account other)
         {
-            if (obj == null || GetType() != obj.GetType())
+            if (other == null || GetType() != other.GetType())
             {
                 return false;
             }
-
-            Account c = (Account)obj;
-            return Name.Equals(c.Name) && Number.Equals(c.Number);
+            return Name.Equals(other.Name) && Number.Equals(other.Number);
         }
-
     }
 }

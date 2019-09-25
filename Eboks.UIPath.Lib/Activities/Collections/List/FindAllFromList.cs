@@ -8,7 +8,7 @@ using System.ComponentModel;
 
 namespace Eboks.UIPath.Lib.Activities.Collections.List
 {
-    class FindAllFromList<T> : CodeActivity
+    public class FindAllFromList<T> : CodeActivity
     {
         [Category("Input")]
         [RequiredArgument]

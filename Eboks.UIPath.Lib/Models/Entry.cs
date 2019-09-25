@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Eboks.UIPath.Lib.Models
 {
-    class Entry
+    public class Entry : IEquatable<Entry>
     {
         public string EntryDate { get; set; }
         public string AttachmentType { get; set; }
@@ -24,6 +24,15 @@ namespace Eboks.UIPath.Lib.Models
         public Entry()
         {
 
+        }
+
+        public bool Equals(Entry other)
+        {
+            if (other == null || GetType() != other.GetType())
+            {
+                return false;
+            }
+            return EntryDate.Equals(other.EntryDate) && Amount.Equals(other.Amount) && GeneralLedgerNumber.Equals(other.GeneralLedgerNumber);
         }
     }
 }
