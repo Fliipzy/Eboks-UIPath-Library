@@ -2,7 +2,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>eBoks.UIPath.Library</id>
-    <version>1.1.0</version>
+    <iconUrl>https://i.imgur.com/KbkYpmF.png</iconUrl>
+    <version>1.1.0.1</version>
     <title>eBoks UIPath Library</title>
     <authors>Frederik Lundbeck Jørgensen</authors>
     <owners>Frederik Lundbeck Jørgensen</owners>
