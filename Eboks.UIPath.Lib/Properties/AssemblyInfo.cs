@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Eboks.UIPath.Lib")]
-[assembly: AssemblyDescription("A UIPath library for Eboks")]
+[assembly: AssemblyDescription("A .NET Framework class library for UIPath development at eBoks.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Frederik Lundbeck Jørgensen")]
+[assembly: AssemblyCompany("Eboks A/S")]
 [assembly: AssemblyProduct("Eboks.UIPath.Lib")]
-[assembly: AssemblyCopyright("Copyright ©  2019")]
+[assembly: AssemblyCopyright("Copyright © Fred 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

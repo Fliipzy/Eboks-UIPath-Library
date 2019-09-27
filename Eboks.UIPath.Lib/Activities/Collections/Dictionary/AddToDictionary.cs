@@ -12,15 +12,15 @@ namespace Eboks.UIPath.Lib.Activities.Collections.Dictionary
     {
         [Category("Input")]
         [RequiredArgument]
-        private InArgument<Dictionary<T, U>> Dictionary { get; set; }
+        public InArgument<Dictionary<T, U>> Dictionary { get; set; }
 
         [Category("Input")]
         [RequiredArgument]
-        private InArgument<T> Key { get; set; }
+        public InArgument<T> Key { get; set; }
 
         [Category("Input")]
         [RequiredArgument]
-        private InArgument<U> Value { get; set; }
+        public InArgument<U> Value { get; set; }
 
         protected override void Execute(CodeActivityContext context)
         {

@@ -1,18 +1,15 @@
-<?xml version="1.0"?>
-<package >
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>$id$</id>
-    <version>1.0</version>
-    <title>Eboks UIPath Library</title>
-    <authors>Frederik Lundbeck J�rgensen</authors>
-    <owners>Frederik Lundbeck J�rgensen</owners>
-    <licenseUrl></licenseUrl>
-    <projectUrl></projectUrl>
-    <iconUrl></iconUrl>
+    <id>eBoks.UIPath.Library</id>
+    <version>1.1.0</version>
+    <title>eBoks UIPath Library</title>
+    <authors>Frederik Lundbeck Jørgensen</authors>
+    <owners>Frederik Lundbeck Jørgensen</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>A helper library for UIPath developing at Eboks</description>
-    <releaseNotes></releaseNotes>
-    <copyright>Copyright 2019</copyright>
-    <tags>Eboks</tags>
+    <projectUrl>https://github.com/Fliipzy/Eboks-UIPath-Library</projectUrl>
+    <description>A .NET Framework class library for developing automatic robot processes at eBoks A/S.</description>
+    <copyright>Copyright © Fliipzy 2019</copyright>
+    <tags>Fliipzy UIPath robot</tags>
   </metadata>
 </package>

@@ -15,7 +15,13 @@ namespace Eboks.UIPath.Lib.Models
         public string CompanyEntryGroup { get; set; }
         public string ProductEntryGroup { get; set; }
         public double NetChange { get; set; }
-        public double Balance { get; set; }
+        public double Balance 
+        {
+            get
+            {
+                return Entries.FindAll(e => !e.Forecast).Sum(e => e.Amount);
+            }
+        }
         public List<Entry> Entries { get; set; } = new List<Entry>();
 
         public Account()
