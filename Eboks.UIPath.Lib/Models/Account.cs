@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Eboks.UIPath.Lib.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,11 @@ namespace Eboks.UIPath.Lib.Models
         public string CompanyEntryGroup { get; set; }
         public string ProductEntryGroup { get; set; }
         public double NetChange { get; set; }
+        public List<Entry> Entries { get; set; } = new List<Entry>();
+        
+        /// <summary>
+        /// Returns the sum of all non-forecast entries.
+        /// </summary>
         public double Balance 
         {
             get
@@ -22,12 +28,19 @@ namespace Eboks.UIPath.Lib.Models
                 return Entries.FindAll(e => !e.Forecast).Sum(e => e.Amount);
             }
         }
-        public List<Entry> Entries { get; set; } = new List<Entry>();
 
-        public Account()
+        /// <summary>
+        /// Returns the sum of all forecast entries.
+        /// </summary>
+        public double ForecastBalance
         {
-            Entries = new List<Entry>();
+            get
+            {
+                return Entries.FindAll(e => e.Forecast).Sum(e => e.Amount);
+            }
         }
+
+        public Account(){}
 
         public override string ToString()
         {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Eboks.UIPath.Lib.Utilities;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,13 +23,9 @@ namespace Eboks.UIPath.Lib.Models
         public string CountryCode { get; set; }
         public string ActivitiesCode { get; set; }
         public double VatAmount { get; set; }
-
         public Boolean Forecast { get; set; } = false;
 
-        public Entry()
-        {
-
-        }
+        public Entry() {}
 
         public bool Equals(Entry other)
         {

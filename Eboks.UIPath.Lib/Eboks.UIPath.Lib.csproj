@@ -60,6 +60,7 @@
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Entry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\EntryHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

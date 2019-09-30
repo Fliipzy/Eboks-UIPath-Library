@@ -8,21 +8,35 @@ using System.ComponentModel;
 
 namespace Eboks.UIPath.Lib.Activities.Collections.Dictionary
 {
-    [DisplayName("Add to dictionary"), DesignerCategory("Collections")]
+    [DisplayName("Add to dictionary")]
     [Description("Adds a KeyValuePair to a dictionary.")]
-    public class AddToDictionary<T,U> : CodeActivity
+    public sealed class AddToDictionary<TKey, TValue> : CodeActivity
     {
-        [Category("Input"), DisplayName("Dictionary Target"), RequiredArgument]
+        [Category("Input")]
+        [RequiredArgument]
+        [DisplayName("Key type")]
+        public Type KeyType { get; set; } = typeof(object);
+
+        [Category("Input")]
+        [RequiredArgument]
+        [DisplayName("Value type")]
+        public Type ValueType { get; set; } = typeof(object);
+
+        [Category("Input")]
+        [RequiredArgument]
+        [DisplayName("Dictionary target")]
         [Description("The target dictionary, which the KeyValuePair will be added to.")]
-        public InArgument<Dictionary<T, U>> Dictionary { get; set; }
+        public InArgument<Dictionary<TKey, TValue>> Dictionary { get; set; }
 
-        [Category("Input"), RequiredArgument]
-        [Description("The key object, to be added.")]
-        public InArgument<T> Key { get; set; }
+        [Category("Input")]
+        [RequiredArgument]
+        [Description("The key object, which will be added to the target dictionary")]
+        public InArgument<TKey> Key { get; set; }
 
-        [Category("Input"), RequiredArgument]
-        [Description("The value object, to be added.")]
-        public InArgument<U> Value { get; set; }
+        [Category("Input")]
+        [RequiredArgument]
+        [Description("The value object, which will be added to the target dictionary")]
+        public InArgument<TValue> Value { get; set; }
 
         protected override void Execute(CodeActivityContext context)
         {
