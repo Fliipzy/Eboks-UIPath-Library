@@ -14,16 +14,6 @@ namespace Eboks.UIPath.Lib.Activities.Collections.Dictionary
     {
         [Category("Input")]
         [RequiredArgument]
-        [DisplayName("Key type")]
-        public Type KeyType { get; set; } = typeof(object);
-
-        [Category("Input")]
-        [RequiredArgument]
-        [DisplayName("Value type")]
-        public Type ValueType { get; set; } = typeof(object);
-
-        [Category("Input")]
-        [RequiredArgument]
         [DisplayName("Dictionary target")]
         [Description("The target dictionary, which the KeyValuePair will be added to.")]
         public InArgument<Dictionary<TKey, TValue>> Dictionary { get; set; }
