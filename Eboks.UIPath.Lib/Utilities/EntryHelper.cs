@@ -15,7 +15,7 @@ namespace Eboks.UIPath.Lib.Utilities
         /// <param name="from">The start date.</param>
         /// <param name="too">The end date.</param>
         /// <param name="entryList">The original list of entries.</param>
-        public static List<Entry> GetEntriesBetween(DateTime from, DateTime too, List<Entry> entryList)
+        public static List<Entry> EntriesBetween(DateTime from, DateTime too, List<Entry> entryList)
         {
             return entryList.FindAll(e => e.EntryDate.Ticks >= from.Ticks && e.EntryDate.Ticks <= too.Ticks);
         }
@@ -25,7 +25,7 @@ namespace Eboks.UIPath.Lib.Utilities
         /// </summary>
         /// <param name="entryList">The list to sum.</param>
         /// <returns></returns>
-        public static double GetSumOfEntries(List<Entry> entryList)
+        public static double AmountSumOfEntries(List<Entry> entryList)
         {
             return entryList.Sum(e => e.Amount);
         }
