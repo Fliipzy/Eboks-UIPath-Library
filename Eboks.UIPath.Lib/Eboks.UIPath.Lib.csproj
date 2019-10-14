@@ -58,8 +58,11 @@
     <Compile Include="Activities\Collections\List\FindAllFromList.cs" />
     <Compile Include="Activities\Collections\List\FindFromList.cs" />
     <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\Debitor.cs" />
     <Compile Include="Models\Entry.cs" />
+    <Compile Include="Models\Line.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\AccountHelper.cs" />
     <Compile Include="Utilities\EntryHelper.cs" />
   </ItemGroup>
   <ItemGroup>

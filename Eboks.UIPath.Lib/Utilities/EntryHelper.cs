@@ -19,15 +19,5 @@ namespace Eboks.UIPath.Lib.Utilities
         {
             return entryList.FindAll(e => e.EntryDate.Ticks >= from.Ticks && e.EntryDate.Ticks <= too.Ticks);
         }
-
-        /// <summary>
-        /// Retrieves the sum of all the given entries amounts.
-        /// </summary>
-        /// <param name="entryList">The list to sum.</param>
-        /// <returns></returns>
-        public static double AmountSumOfEntries(List<Entry> entryList)
-        {
-            return entryList.Sum(e => e.Amount);
-        }
     }
 }

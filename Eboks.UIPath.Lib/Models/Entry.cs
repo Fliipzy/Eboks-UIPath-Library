@@ -12,20 +12,34 @@ namespace Eboks.UIPath.Lib.Models
     public class Entry : IEquatable<Entry>
     {
         public DateTime EntryDate { get; set; }
+
         public string AttachmentType { get; set; }
+
         public string AttachmentNumber { get; set; }
+
         public string GeneralLedgerNumber { get; set; }
+
         public string Description { get; set; }
+
         public string CompanyEntryGroup { get; set; }
+
         public string ProductEntryGroup { get; set; }
+
         public double Amount { get; set; }
+
         public string DepartmentCode { get; set; }
+
         public string CountryCode { get; set; }
+
         public string ActivitiesCode { get; set; }
+
         public double VatAmount { get; set; }
+
         public Boolean Forecast { get; set; } = false;
 
-        public Entry() {}
+        public Entry() 
+        {
+        }
 
         public bool Equals(Entry other)
         {
@@ -34,6 +48,11 @@ namespace Eboks.UIPath.Lib.Models
                 return false;
             }
             return EntryDate.Equals(other.EntryDate) && Amount.Equals(other.Amount) && GeneralLedgerNumber.Equals(other.GeneralLedgerNumber);
+        }
+
+        public override string ToString()
+        {
+            return string.Format("[Entry (LedgerNumber: {0}, EntryDate: {1})]", GeneralLedgerNumber, EntryDate);
         }
     }
 }
