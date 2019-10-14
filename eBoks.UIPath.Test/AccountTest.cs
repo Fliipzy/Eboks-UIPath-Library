@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Eboks.UIPath.Lib.Utilities;
 
-namespace eBoks.UIPath.Test
+namespace Eboks.UIPath.Test
 {
     [TestClass]
     public class AccountTest

@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eboks.UIPath.Lib", "Eboks.UIPath.Lib\Eboks.UIPath.Lib.csproj", "{223CA76B-FD1B-473D-9CBB-0403F8C42107}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eBoks.UIPath.Test", "eBoks.UIPath.Test\eBoks.UIPath.Test.csproj", "{4BC9CA14-911B-455C-90FB-F68555408282}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eboks.UIPath.Test", "eBoks.UIPath.Test\Eboks.UIPath.Test.csproj", "{4BC9CA14-911B-455C-90FB-F68555408282}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

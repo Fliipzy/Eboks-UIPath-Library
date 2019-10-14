@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Eboks.UIPath.Lib.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace eBoks.UIPath.Test
+namespace Eboks.UIPath.Test
 {
     [TestClass]
     public class DebitorTest

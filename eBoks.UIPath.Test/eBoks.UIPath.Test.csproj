@@ -8,8 +8,8 @@
     <ProjectGuid>{4BC9CA14-911B-455C-90FB-F68555408282}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>eBoks.UIPath.Test</RootNamespace>
-    <AssemblyName>eBoks.UIPath.Test</AssemblyName>
+    <RootNamespace>Eboks.UIPath.Test</RootNamespace>
+    <AssemblyName>Eboks.UIPath.Test</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
