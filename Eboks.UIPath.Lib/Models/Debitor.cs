@@ -13,6 +13,10 @@ namespace Eboks.UIPath.Lib.Models
 
         public string Name { get; set; }
 
+        public  double PaymentPeriodAverage { get { return Lines.FindAll(x => !x.Open).Average(x => TimeSpan.FromTicks(x.ClosedAtDate.Ticks - x.DueDate.Ticks).TotalDays); } }
+
+        public double OpenLineSalesTotal { get { return Lines.FindAll(x => x.Open).Sum(x => x.Sales); } }
+
         public List<Line> Lines { get; set; } = new List<Line>();
 
         public Debitor() {}

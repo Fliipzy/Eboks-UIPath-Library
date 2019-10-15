@@ -22,5 +22,17 @@ namespace Eboks.UIPath.Test
                 Console.WriteLine(line.ToString());
             }
         }
+
+        [TestMethod]
+        public void CareFace()
+        {
+            Debitor d = new Debitor();
+            d.Lines.Add(new Line() { Open = false, DueDate = new DateTime(2000, 1, 1), ClosedAtDate = new DateTime(2000, 2, 1) });
+            d.Lines.Add(new Line() { Open = false, DueDate = new DateTime(2000, 1, 1), ClosedAtDate = new DateTime(2000, 1, 11) });
+            d.Lines.Add(new Line() { Open = false, DueDate = new DateTime(2000, 1, 1), ClosedAtDate = new DateTime(2000, 1, 21) });
+
+            Console.WriteLine(d.PaymentPeriodAverage);
+        }
+
     }
 }
