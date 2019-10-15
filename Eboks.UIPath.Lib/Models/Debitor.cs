@@ -9,7 +9,7 @@ namespace Eboks.UIPath.Lib.Models
 {
     public class Debitor : IEquatable<Debitor>, IEnumerable<Line>
     {
-        public int No_ { get; set; }
+        public string No_ { get; set; }
 
         public string Name { get; set; }
 
@@ -17,7 +17,7 @@ namespace Eboks.UIPath.Lib.Models
 
         public Debitor() {}
 
-        public Debitor(int no_, string name)
+        public Debitor(string no_, string name)
         {
             No_ = no_;
             Name = name;
