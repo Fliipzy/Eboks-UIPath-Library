@@ -25,7 +25,7 @@ namespace Eboks.UIPath.Lib.Models
 
         public DateTime ClosedAtDate { get; set; }
 
-        public int Sales { get; set; }
+        public double Sales { get; set; }
 
         public bool Open { get; set; } 
 

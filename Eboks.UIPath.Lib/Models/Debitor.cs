@@ -13,8 +13,6 @@ namespace Eboks.UIPath.Lib.Models
 
         public string Name { get; set; }
 
-        public  double PaymentPeriodAverage { get { return Lines.FindAll(x => !x.Open).Average(x => TimeSpan.FromTicks(x.ClosedAtDate.Ticks - x.DueDate.Ticks).TotalDays); } }
-
         public double OpenLineSalesTotal { get { return Lines.FindAll(x => x.Open).Sum(x => x.Sales); } }
 
         public List<Line> Lines { get; set; } = new List<Line>();
@@ -24,7 +22,34 @@ namespace Eboks.UIPath.Lib.Models
         public Debitor(string no_, string name)
         {
             No_ = no_;
-            Name = name;
+            Name = name;       
+        }
+
+        public double GetMedian()
+        {
+            //double result = 0;
+            List<double> payBackPeriod = new List<double>();
+            foreach (Line l in Lines)
+            {
+                if (!l.Open)
+                {
+                    double paymentDays = TimeSpan.FromTicks(l.ClosedAtDate.Ticks).TotalDays - TimeSpan.FromTicks(l.DueDate.Ticks).TotalDays;
+                    payBackPeriod.Add(paymentDays);
+                }
+            }
+
+            payBackPeriod.Sort();
+
+            if (payBackPeriod.Count % 2 == 0)
+            {
+                
+                return payBackPeriod[((payBackPeriod.Count / 2)-1)]; 
+            }
+            else
+            {
+                return payBackPeriod[(payBackPeriod.Count / 2)];
+            }
+            //return result;
         }
 
         public IEnumerator<Line> GetEnumerator()

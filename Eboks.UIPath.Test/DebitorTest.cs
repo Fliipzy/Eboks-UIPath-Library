@@ -31,7 +31,27 @@ namespace Eboks.UIPath.Test
             d.Lines.Add(new Line() { Open = false, DueDate = new DateTime(2000, 1, 1), ClosedAtDate = new DateTime(2000, 1, 11) });
             d.Lines.Add(new Line() { Open = false, DueDate = new DateTime(2000, 1, 1), ClosedAtDate = new DateTime(2000, 1, 21) });
 
-            Console.WriteLine(d.PaymentPeriodAverage);
+            Console.WriteLine(d.GetMedian());
+        }
+
+        [TestMethod]
+        public void Wqr()
+        {
+            List<int> ints = new List<int>() { 1, 2, 3, 4, 5, 6};
+
+            if (ints.Count % 2 == 0)
+            {
+                int p = ints[((ints.Count / 2)-1)];
+                Console.WriteLine(p);
+            }
+            
+            else
+            {
+                int p = ints[(ints.Count / 2)];
+                Console.WriteLine(p);
+            }
+            
+           
         }
 
     }
