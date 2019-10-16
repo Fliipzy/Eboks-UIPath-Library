@@ -27,17 +27,16 @@ namespace Eboks.UIPath.Test
         public void CareFace()
         {
             Debitor d = new Debitor();
-            d.Lines.Add(new Line() { Open = false, DueDate = new DateTime(2000, 1, 1), ClosedAtDate = new DateTime(2000, 2, 1) });
-            d.Lines.Add(new Line() { Open = false, DueDate = new DateTime(2000, 1, 1), ClosedAtDate = new DateTime(2000, 1, 11) });
-            d.Lines.Add(new Line() { Open = false, DueDate = new DateTime(2000, 1, 1), ClosedAtDate = new DateTime(2000, 1, 21) });
+            d.Lines.Add(new Line() { Open = true, Sales = 10000, VatCode = "KONCERN" });
+            d.Lines.Add(new Line() { Open = true, Sales = 10000, VatCode = "INDLAND" });
 
-            Console.WriteLine(d.GetMedian());
+            Console.WriteLine(d.OpenLineSalesTotal);
         }
 
         [TestMethod]
         public void Wqr()
         {
-            List<int> ints = new List<int>() { 1, 2, 3, 4, 5, 6};
+            List<int> ints = new List<int>() { 10, 11, 12, 13, 14, 15, 16};
 
             if (ints.Count % 2 == 0)
             {

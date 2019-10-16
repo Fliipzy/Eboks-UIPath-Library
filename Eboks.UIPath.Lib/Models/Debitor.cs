@@ -9,19 +9,13 @@ namespace Eboks.UIPath.Lib.Models
 {
     public class Debitor : IEquatable<Debitor>, IEnumerable<Line>
     {
-        private const double AVG_PAYBACK = 2;
+        private const double AVERAGE_PAYBACK_DAYS = 2;
 
         public string No_ { get; set; }
 
         public string Name { get; set; }
 
-        public double OpenLineSalesTotal 
-        { 
-            get 
-            { 
-                return Lines.FindAll(x => x.Open && x.VatCode == "INDLAND").Sum(x => (x.Sales) * 1.25) + Lines.FindAll(x => x.Open && x.VatCode != "INDLAND").Sum(x => x.Sales); 
-            } 
-        }
+        public double OpenLineSalesTotal { get { return Lines.FindAll(x => x.Open).Sum(x => x.VatCode == "INDLAND" ? x.Sales * 1.25 : x.Sales); } }
 
         public List<Line> Lines { get; set; } = new List<Line>();
 
@@ -36,21 +30,19 @@ namespace Eboks.UIPath.Lib.Models
         public double GetMedian()
         {
             List<double> payBackPeriod = new List<double>();
-            foreach (Line l in Lines)
+
+            //Foreach line in lines where line is not open
+            foreach (Line l in Lines.Where(l => !l.Open))
             {
-                if (!l.Open)
-                {
-                    double paymentDays = TimeSpan.FromTicks(l.ClosedAtDate.Ticks).TotalDays - TimeSpan.FromTicks(l.DueDate.Ticks).TotalDays;
-                    payBackPeriod.Add(paymentDays);
-                }
+                double paymentDays = TimeSpan.FromTicks(l.ClosedAtDate.Ticks).TotalDays - TimeSpan.FromTicks(l.DueDate.Ticks).TotalDays;
+                payBackPeriod.Add(paymentDays);
             }
 
-            if (payBackPeriod.Count<1)
+            //If empty
+            if (!payBackPeriod.Any())
             {
-                return AVG_PAYBACK;
+                return AVERAGE_PAYBACK_DAYS;
             }
-            
-
             
             payBackPeriod.Sort();
 
@@ -63,7 +55,6 @@ namespace Eboks.UIPath.Lib.Models
             {
                 return payBackPeriod[(payBackPeriod.Count / 2)];
             }
-
         }
 
         public IEnumerator<Line> GetEnumerator()
