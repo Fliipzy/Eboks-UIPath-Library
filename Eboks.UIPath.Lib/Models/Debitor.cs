@@ -9,6 +9,8 @@ namespace Eboks.UIPath.Lib.Models
 {
     public class Debitor : IEquatable<Debitor>, IEnumerable<Line>
     {
+        private const double AVG_PAYBACK = 2;
+
         public string No_ { get; set; }
 
         public string Name { get; set; }
@@ -37,6 +39,13 @@ namespace Eboks.UIPath.Lib.Models
                 }
             }
 
+            if (payBackPeriod.Count<1)
+            {
+                return AVG_PAYBACK;
+            }
+            
+
+            
             payBackPeriod.Sort();
 
             if (payBackPeriod.Count % 2 == 0)
