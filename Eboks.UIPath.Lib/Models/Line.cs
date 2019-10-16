@@ -27,7 +27,9 @@ namespace Eboks.UIPath.Lib.Models
 
         public double Sales { get; set; }
 
-        public bool Open { get; set; } 
+        public bool Open { get; set; }
+
+        public string VatCode { get; set; }
 
         public Line()
         {

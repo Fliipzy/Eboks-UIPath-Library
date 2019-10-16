@@ -15,7 +15,13 @@ namespace Eboks.UIPath.Lib.Models
 
         public string Name { get; set; }
 
-        public double OpenLineSalesTotal { get { return Lines.FindAll(x => x.Open).Sum(x => x.Sales); } }
+        public double OpenLineSalesTotal 
+        { 
+            get 
+            { 
+                return Lines.FindAll(x => x.Open && x.VatCode == "INDLAND").Sum(x => (x.Sales) * 1.25) + Lines.FindAll(x => x.Open && x.VatCode != "INDLAND").Sum(x => x.Sales); 
+            } 
+        }
 
         public List<Line> Lines { get; set; } = new List<Line>();
 
