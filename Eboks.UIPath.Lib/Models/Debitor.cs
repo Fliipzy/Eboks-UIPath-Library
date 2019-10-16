@@ -27,7 +27,6 @@ namespace Eboks.UIPath.Lib.Models
 
         public double GetMedian()
         {
-            //double result = 0;
             List<double> payBackPeriod = new List<double>();
             foreach (Line l in Lines)
             {
@@ -49,7 +48,7 @@ namespace Eboks.UIPath.Lib.Models
             {
                 return payBackPeriod[(payBackPeriod.Count / 2)];
             }
-            //return result;
+
         }
 
         public IEnumerator<Line> GetEnumerator()
