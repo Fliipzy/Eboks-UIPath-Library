@@ -32,7 +32,7 @@ namespace Eboks.UIPath.Lib.Models
             List<double> payBackPeriod = new List<double>();
 
             //Foreach line in lines where line is not open
-            foreach (Line l in Lines.Where(l => !l.Open))
+            foreach (Line l in Lines.Where(l => !l.Open && l.DocumentType == "2"))
             {
                 double paymentDays = TimeSpan.FromTicks(l.ClosedAtDate.Ticks).TotalDays - TimeSpan.FromTicks(l.DueDate.Ticks).TotalDays;
                 payBackPeriod.Add(paymentDays);
