@@ -47,7 +47,15 @@ namespace Eboks.UIPath.Lib.Models
             {
                 return false;
             }
-            return EntryDate.Equals(other.EntryDate) && Amount.Equals(other.Amount) && GeneralLedgerNumber.Equals(other.GeneralLedgerNumber);
+            return EntryDate.Equals(other.EntryDate) && 
+                    Amount.Equals(other.Amount) && 
+                    AttachmentNumber.Equals(other.AttachmentNumber) &&
+                    Description.Equals(other.Description);
+        }
+
+        public override int GetHashCode()
+        {
+            return (EntryDate.ToString() + Amount.ToString() + AttachmentNumber + Description).GetHashCode();
         }
 
         public override string ToString()
