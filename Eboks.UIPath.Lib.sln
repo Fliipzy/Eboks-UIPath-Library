@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eboks.UIPath.Lib", "Eboks.UIPath.Lib\Eboks.UIPath.Lib.csproj", "{223CA76B-FD1B-473D-9CBB-0403F8C42107}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eboks.UIPath.Test", "eBoks.UIPath.Test\Eboks.UIPath.Test.csproj", "{4BC9CA14-911B-455C-90FB-F68555408282}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{223CA76B-FD1B-473D-9CBB-0403F8C42107}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{223CA76B-FD1B-473D-9CBB-0403F8C42107}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{223CA76B-FD1B-473D-9CBB-0403F8C42107}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4BC9CA14-911B-455C-90FB-F68555408282}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4BC9CA14-911B-455C-90FB-F68555408282}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4BC9CA14-911B-455C-90FB-F68555408282}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4BC9CA14-911B-455C-90FB-F68555408282}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
