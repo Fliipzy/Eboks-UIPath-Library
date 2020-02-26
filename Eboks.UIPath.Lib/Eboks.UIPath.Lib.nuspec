@@ -3,9 +3,9 @@
   <metadata>
     <id>eBoks.UIPath.Library</id>
     <iconUrl>https://i.imgur.com/KbkYpmF.png</iconUrl>
-    <version>1.1.0.12</version>
+    <version>1.1.0.14</version>
     <title>eBoks UIPath Library</title>
-    <authors>Kasper Boller, Frederik Lundbeck Jørgensen</authors>
+    <authors> Frederik Lundbeck Jørgensen, Kasper Boller</authors>
     <owners>Frederik Lundbeck Jørgensen</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectUrl>https://github.com/Fliipzy/Eboks-UIPath-Library</projectUrl>

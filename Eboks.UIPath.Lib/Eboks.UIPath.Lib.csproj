@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activities\API\Google\NaturalLanguageAPI.cs" />
     <Compile Include="Activities\Collections\Dictionary\AddToDictionary.cs">
       <SubType>Collections</SubType>
     </Compile>
